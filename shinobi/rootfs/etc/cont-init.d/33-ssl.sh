@@ -1,10 +1,9 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/env bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Shinobi
 # Ensures the SSL settings are configured
 # ==============================================================================
 # shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
 
 declare CONFIG
 declare certfile
@@ -12,16 +11,16 @@ declare keyfile
 
 CONFIG=$(</opt/shinobi/conf.json)
 
-if hass.config.true 'ssl'; then
-    CONFIG=$(hass.jq "${CONFIG}" ".ssl={}")
+if bashio::config.true 'ssl'; then
+    CONFIG=$(bashio::jq "${CONFIG}" ".ssl={}")
 
-    certfile=$(hass.config.get 'certfile')
-    CONFIG=$(hass.jq "${CONFIG}" ".ssl.cert=\"/ssl/${certfile}\"")
+    certfile=$(bashio::config 'certfile')
+    CONFIG=$(bashio::jq "${CONFIG}" ".ssl.cert=\"/ssl/${certfile}\"")
 
-    keyfile=$(hass.config.get 'keyfile')
-    CONFIG=$(hass.jq "${CONFIG}" ".ssl.key=\"/ssl/${keyfile}\"")
+    keyfile=$(bashio::config 'keyfile')
+    CONFIG=$(bashio::jq "${CONFIG}" ".ssl.key=\"/ssl/${keyfile}\"")
 else
-    CONFIG=$(hass.jq "${CONFIG}" "del(.ssl)")
+    CONFIG=$(bashio::jq "${CONFIG}" "del(.ssl)")
 fi
 
 echo "${CONFIG}" > /opt/shinobi/conf.json

@@ -1,10 +1,9 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/env bashio
 # ==============================================================================
 # Community Hass.io Add-ons: Shinobi
 # Ensures the mail settings and credentials are configured
 # ==============================================================================
 # shellcheck disable=SC1091
-source /usr/lib/hassio-addons/base.sh
 
 declare CONFIG
 declare service
@@ -15,33 +14,33 @@ declare port
 
 CONFIG=$(</opt/shinobi/conf.json)
 
-service=$(hass.config.get 'mail_service')
-username=$(hass.config.get 'mail_username')
-password=$(hass.config.get 'mail_password')
+service=$(bashio::config 'mail_service')
+username=$(bashio::config 'mail_username')
+password=$(bashio::config 'mail_password')
 
-CONFIG=$(hass.jq "${CONFIG}" ".mail={\"auth\": {}}");
+CONFIG=$(bashio::jq "${CONFIG}" ".mail={\"auth\": {}}");
 
 if [[ "${service}" = "gmail" ]]; then
-    CONFIG=$(hass.jq "${CONFIG}" ".mail.service=\"gmail\"")
+    CONFIG=$(bashio::jq "${CONFIG}" ".mail.service=\"gmail\"")
 else
-    host=$(hass.config.get 'mail_host')
-    CONFIG=$(hass.jq "${CONFIG}" ".mail.host=\"${host}\"")
+    host=$(bashio::config 'mail_host')
+    CONFIG=$(bashio::jq "${CONFIG}" ".mail.host=\"${host}\"")
     
-    port=$(hass.config.get 'mail_port')
-    CONFIG=$(hass.jq "${CONFIG}" ".mail.port=${port}")
+    port=$(bashio::config 'mail_port')
+    CONFIG=$(bashio::jq "${CONFIG}" ".mail.port=${port}")
 
-    if hass.config.true 'mail_secure'; then
-        CONFIG=$(hass.jq "${CONFIG}" ".mail.secure=true")
+    if bashio::config.has_value 'mail_secure'; then
+        CONFIG=$(bashio::jq "${CONFIG}" ".mail.secure=true")
     else
-        CONFIG=$(hass.jq "${CONFIG}" ".mail.secure=false")
+        CONFIG=$(bashio::jq "${CONFIG}" ".mail.secure=false")
     fi
 
-    if hass.config.false 'mail_cert_verify'; then
-        CONFIG=$(hass.jq "${CONFIG}" ".mail.tls={\"rejectUnauthorized\": false}")
+    if bashio::config.false 'mail_cert_verify'; then
+        CONFIG=$(bashio::jq "${CONFIG}" ".mail.tls={\"rejectUnauthorized\": false}")
     fi
 fi
 
-CONFIG=$(hass.jq "${CONFIG}" ".mail.auth.user=\"${username}\"")
-CONFIG=$(hass.jq "${CONFIG}" ".mail.auth.pass=\"${password}\"")
+CONFIG=$(bashio::jq "${CONFIG}" ".mail.auth.user=\"${username}\"")
+CONFIG=$(bashio::jq "${CONFIG}" ".mail.auth.pass=\"${password}\"")
 
 echo "${CONFIG}" > /opt/shinobi/conf.json
