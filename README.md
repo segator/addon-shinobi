@@ -4,11 +4,9 @@
 ![Project Stage][project-stage-shield]
 [![License][license-shield]](LICENSE.md)
 
-[![GitLab CI][gitlabci-shield]][gitlabci]
 ![Project Maintenance][maintenance-shield]
 [![GitHub Activity][commits-shield]][commits]
 
-[![Bountysource][bountysource-shield]][bountysource]
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
@@ -49,32 +47,6 @@ You are now ready to use Shinobi, use the freshly created login from now on.
 
 **NOTE**: Do not add this repository to Hass.io, please use:
 `https://github.com/hassio-addons/repository`.
-
-## Docker status
-
-[![Docker Architecture][armhf-arch-shield]][armhf-dockerhub]
-[![Docker Version][armhf-version-shield]][armhf-microbadger]
-[![Docker Layers][armhf-layers-shield]][armhf-microbadger]
-[![Docker Pulls][armhf-pulls-shield]][armhf-dockerhub]
-[![Anchore Image Overview][armhf-anchore-shield]][armhf-anchore]
-
-[![Docker Architecture][aarch64-arch-shield]][aarch64-dockerhub]
-[![Docker Version][aarch64-version-shield]][aarch64-microbadger]
-[![Docker Layers][aarch64-layers-shield]][aarch64-microbadger]
-[![Docker Pulls][aarch64-pulls-shield]][aarch64-dockerhub]
-[![Anchore Image Overview][aarch64-anchore-shield]][aarch64-anchore]
-
-[![Docker Architecture][amd64-arch-shield]][amd64-dockerhub]
-[![Docker Version][amd64-version-shield]][amd64-microbadger]
-[![Docker Layers][amd64-layers-shield]][amd64-microbadger]
-[![Docker Pulls][amd64-pulls-shield]][amd64-dockerhub]
-[![Anchore Image Overview][amd64-anchore-shield]][amd64-anchore]
-
-[![Docker Architecture][i386-arch-shield]][i386-dockerhub]
-[![Docker Version][i386-version-shield]][i386-microbadger]
-[![Docker Layers][i386-layers-shield]][i386-microbadger]
-[![Docker Pulls][i386-pulls-shield]][i386-dockerhub]
-[![Anchore Image Overview][i386-anchore-shield]][i386-anchore]
 
 ## Configuration
 
@@ -362,8 +334,7 @@ You have several options to get them answered:
   [dedicated topic][forum] on that forum regarding this add-on.
 - The Home Assistant [Discord Chat Server][discord] for general Home Assistant
   discussions and questions.
-- The Shinobi [Discord Chat Server][discord-shinobi] for Shinobi specific
-  questions.
+- Send me a message on [Discord][discord-me].
 - Join the [Reddit subreddit][reddit] in [/r/homeassistant][reddit]
 
 You could also [open an issue here][issue] GitHub.
@@ -381,6 +352,8 @@ Thank you for being involved! :heart_eyes:
 ## Authors & contributors
 
 The original setup of this repository is by [Franck Nijhof][frenck].
+
+The updated repository is maintained by [Rob Landry][roblandry]
 
 For a full list of all authors and contributors,
 check [the contributor's page][contributors].
@@ -416,63 +389,27 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[aarch64-anchore-shield]: https://anchore.io/service/badges/image/062f2a7c62b6c277a8c68575b9095f569c5b66259c5930f46cb1f6b805b183e1
-[aarch64-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fshinobi-aarch64%3Alatest
-[aarch64-arch-shield]: https://img.shields.io/badge/architecture-aarch64-blue.svg
-[aarch64-dockerhub]: https://hub.docker.com/r/hassioaddons/shinobi-aarch64
-[aarch64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/shinobi-aarch64.svg
-[aarch64-microbadger]: https://microbadger.com/images/hassioaddons/shinobi-aarch64
-[aarch64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/shinobi-aarch64.svg
-[aarch64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/shinobi-aarch64.svg
-[alpine-packages]: https://pkgs.alpinelinux.org/packages
-[amd64-anchore-shield]: https://anchore.io/service/badges/image/52ef95643eab5f0e403f82d0f27cf97ab6285553075699cf4ba06ff655975e6c
-[amd64-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fshinobi-amd64%3Alatest
-[amd64-arch-shield]: https://img.shields.io/badge/architecture-amd64-blue.svg
-[amd64-dockerhub]: https://hub.docker.com/r/hassioaddons/shinobi-amd64
-[amd64-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/shinobi-amd64.svg
-[amd64-microbadger]: https://microbadger.com/images/hassioaddons/shinobi-amd64
-[amd64-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/shinobi-amd64.svg
-[amd64-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/shinobi-amd64.svg
-[armhf-anchore-shield]: https://anchore.io/service/badges/image/9627189757e5770ad50abe1cbcee9559731e18dc8d3015aacaeab190abf6274c
-[armhf-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fshinobi-armhf%3Alatest
-[armhf-arch-shield]: https://img.shields.io/badge/architecture-armhf-blue.svg
-[armhf-dockerhub]: https://hub.docker.com/r/hassioaddons/shinobi-armhf
-[armhf-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/shinobi-armhf.svg
-[armhf-microbadger]: https://microbadger.com/images/hassioaddons/shinobi-armhf
-[armhf-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/shinobi-armhf.svg
-[armhf-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/shinobi-armhf.svg
-[bountysource-shield]: https://img.shields.io/bountysource/team/hassio-addons/activity.svg
-[bountysource]: https://www.bountysource.com/teams/hassio-addons/issues
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
-[buymeacoffee]: https://www.buymeacoffee.com/frenck
-[commits-shield]: https://img.shields.io/github/commit-activity/y/hassio-addons/addon-shinobi.svg
-[commits]: https://github.com/hassio-addons/addon-shinobi/commits/master
-[contributors]: https://github.com/hassio-addons/addon-shinobi/graphs/contributors
-[discord-shield]: https://img.shields.io/discord/330944238910963714.svg
-[discord-shinobi]: http://discordapp.com/invite/mdhmvuH/
+[buymeacoffee]: https://www.buymeacoffee.com/roblandry
+[commits-shield]: https://img.shields.io/github/commit-activity/y/roblandry/addon-shinobi.svg
+[commits]: https://github.com/roblandry/addon-shinobi/commits/master
+[contributors]: https://github.com/roblandry/addon-shinobi/graphs/contributors
 [discord]: https://discord.gg/c5DvZ4e
+[discord-shield]: https://img.shields.io/discord/330944238910963714.svg
+[discord-me]: http://discordapp.com/users/378376356108435457
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/t/community-hass-io-add-on-shinobi-pro/49767?u=frenck
+[forum]: https://community.home-assistant.io/
 [frenck]: https://github.com/frenck
-[gitlabci-shield]: https://gitlab.com/hassio-addons/addon-shinobi/badges/master/pipeline.svg
-[gitlabci]: https://gitlab.com/hassio-addons/addon-shinobi/pipelines
+[roblandry]: https://github.com/roblandry
 [home-assistant]: https://home-assistant.io
-[i386-anchore-shield]: https://anchore.io/service/badges/image/2209dcec88e7065274779d65084078f982daa7fd00fb14d92bbc609eedc96c00
-[i386-anchore]: https://anchore.io/image/dockerhub/hassioaddons%2Fshinobi-i386%3Alatest
-[i386-arch-shield]: https://img.shields.io/badge/architecture-i386-blue.svg
-[i386-dockerhub]: https://hub.docker.com/r/hassioaddons/shinobi-i386
-[i386-layers-shield]: https://images.microbadger.com/badges/image/hassioaddons/shinobi-i386.svg
-[i386-microbadger]: https://microbadger.com/images/hassioaddons/shinobi-i386
-[i386-pulls-shield]: https://img.shields.io/docker/pulls/hassioaddons/shinobi-i386.svg
-[i386-version-shield]: https://images.microbadger.com/badges/version/hassioaddons/shinobi-i386.svg
-[issue]: https://github.com/hassio-addons/addon-shinobi/issues
+[issue]: https://github.com/roblandry/addon-shinobi/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
-[license-shield]: https://img.shields.io/github/license/hassio-addons/addon-shinobi.svg
-[maintenance-shield]: https://img.shields.io/maintenance/yes/2018.svg
-[project-stage-shield]: https://img.shields.io/badge/project%20stage-experimental-yellow.svg
+[license-shield]: https://img.shields.io/github/license/roblandry/addon-shinobi.svg
+[maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
+[project-stage-shield]: https://img.shields.io/badge/project%20stage-beta-yellow.svg
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/hassio-addons/addon-shinobi.svg
-[releases]: https://github.com/hassio-addons/addon-shinobi/releases
+[releases-shield]: https://img.shields.io/github/release/roblandry/addon-shinobi.svg
+[releases]: https://github.com/roblandry/addon-shinobi/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm

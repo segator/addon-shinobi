@@ -25,54 +25,15 @@ and Universities do not require a subscription.
 
 [Click here for the full documentation][docs]
 
-{% if channel == "edge" %}
-## WARNING! THIS IS AN EDGE VERSION!
-
-This Hass.io Add-ons repository contains edge builds of add-ons. Edge builds
-add-ons are based upon the latest development version.
-
-- They may not work at all.
-- They might stop working at any time.
-- They could have a negative impact on your system.
-
-This repository was created for:
-
-- Anybody willing to test.
-- Anybody interested in trying out upcoming add-ons or add-on features.
-- Developers.
-
-If you are more interested in stable releases of our add-ons:
-
-<https://github.com/hassio-addons/repository>
-
-{% endif %}
-{% if channel == "beta" %}
-## WARNING! THIS IS A BETA VERSION!
-
-This Hass.io Add-ons repository contains beta releases of add-ons.
-
-- They might stop working at any time.
-- They could have a negative impact on your system.
-
-This repository was created for:
-
-- Anybody willing to test.
-- Anybody interested in trying out upcoming add-ons or add-on features.
-
-If you are more interested in stable releases of our add-ons:
-
-<https://github.com/hassio-addons/repository>
-
-{% endif %}
 [buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
 [buymeacoffee]: https://www.buymeacoffee.com/roblandry
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg
 [discord]: http://discordapp.com/users/378376356108435457
-[docs]: {{ repo }}/blob/{{ version }}/README.md
+[docs]: https://github.com/roblandry/addon-shinobi/blob/v0.3.0b0/README.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
 [forum]: https://community.home-assistant.io/
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-beta-yellow.svg
-[release-shield]: https://img.shields.io/badge/version-{{ version }}-blue.svg
-[release]: {{ repo }}/tree/{{ version }}
-[screenshot]: {{ repo }}/raw/master/images/screenshot.jpg
+[release-shield]: https://img.shields.io/badge/version-0.3.0b0-blue.svg
+[release]: {https://github.com/roblandry/addon-shinobi/tree/v0.3.0b0
+[screenshot]: https://github.com/roblandry/addon-shinobi/raw/master/images/screenshot.jpg

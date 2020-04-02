@@ -1,9 +1,10 @@
 {
   "name": "Shinobi Pro",
-  "version": "dev",
+  "version": "0.3.0b0",
+  "stage": "experimental",
   "slug": "shinobi",
   "description": "Beautiful and feature-rich CCTV/NVR for your cameras",
-  "url": "https://community.home-assistant.io/t/community-hass-io-add-on-shinobi-pro/49767?u=frenck",
+  "url": "https://github.com/roblandry/addon-shinobi",
   "webui": "http://[HOST]:[PORT:7440]",
   "startup": "application",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
