@@ -54,28 +54,26 @@ You are now ready to use Shinobi, use the freshly created login from now on.
 
 Example add-on configuration:
 
-```json
-{
-    "log_level": "info",
-    "super_username": "admin@shinobi.video",
-    "super_password": "admin",
-    "mysql": false,
-    "mysql_host": "core-mariadb",
-    "mysql_username": "shinobi",
-    "mysql_password": "sh1n0b1",
-    "mysql_database": "shinobi",
-    "mysql_port": 3306,
-    "mail_service": "gmail",
-    "mail_username": "your_email@gmail.com",
-    "mail_password": "your_password",
-    "mail_host": "smtp.example.com",
-    "mail_port": 587,
-    "mail_secure": false,
-    "mail_cert_verify": true,
-    "ssl": false,
-    "certfile": "fullchain.pem",
-    "keyfile": "privkey.pem"
-}
+```yaml
+log_level: info
+super_username: admin@shinobi.video
+super_password: admin
+mysql: false
+mysql_host: core-mariadb
+mysql_username: shinobi_test
+mysql_password: sh1n0b1_test
+mysql_database: shinobi_test
+mysql_port: 3306
+mail_service: gmail
+mail_username: your_email@gmail.com
+mail_password: your_password
+mail_host: smtp.example.com
+mail_port: 587
+mail_secure: false
+mail_cert_verify: true
+ssl: false
+certfile: fullchain.pem
+keyfile: privkey.pem
 ```
 
 **Note**: _This is just an example, don't copy and past it! Create your own!_
@@ -235,39 +233,20 @@ Edit the add-on configuration of MariaDB. We need to do 3 things:
 
 An example configuration would look like this:
 
-```json
-{
-  "databases": [
-    "homeassistant",
-    "shinobi"
-  ],
-  "logins": [
-    {
-      "username": "hass",
-      "host": "%",
-      "password": "god"
-    },
-    {
-      "username": "shinobi",
-      "host": "%",
-      "password": "sh1n0b1"
-    }
-  ],
-  "rights": [
-    {
-      "username": "hass",
-      "host": "%",
-      "database": "homeassistant",
-      "grant": "ALL PRIVILEGES ON"
-    },
-    {
-      "username": "shinobi",
-      "host": "%",
-      "database": "shinobi",
-      "grant": "ALL PRIVILEGES ON"
-    }
-  ]
-}
+```yaml
+databases:
+  - homeassistant
+  - shinobi
+logins:
+  - username: homeassistant
+    password: PASSWORD
+  - username: shinobi
+    password: sh1n0b1
+rights:
+  - username: homeassistant
+    database: homeassistant
+  - username: shinobi
+    database: shinobi
 ```
 
 After modifying your MariaDB add-on configuration, be sure to restart the
@@ -280,15 +259,13 @@ it to `true`.
 This is a part of the Shinobi add-on configuration that matches the above
 example:
 
-```json
-{
-  "mysql": true,
-  "mysql_host": "core-mariadb",
-  "mysql_username": "shinobi",
-  "mysql_password": "sh1n0b1",
-  "mysql_database": "shinobi",
-  "mysql_port": 3306,
-}
+```yaml
+mysql: true
+mysql_host: core-mariadb
+mysql_username: shinobi_test
+mysql_password: sh1n0b1_test
+mysql_database: shinobi_test
+mysql_port: 3306
 ```
 
 Save the configuration and restart the Shinobi add-on. The add-on will create
