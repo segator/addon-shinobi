@@ -386,7 +386,7 @@ SOFTWARE.
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-beta-yellow.svg
 [python-packages]: https://pypi.org/
 [reddit]: https://reddit.com/r/homeassistant
-[releases-shield]: https://img.shields.io/github/release/roblandry/addon-shinobi.svg
+[releases-shield]: https://img.shields.io/github/v/release/roblandry/addon-shinobi?include_prereleases
 [releases]: https://github.com/roblandry/addon-shinobi/releases
 [repository]: https://github.com/hassio-addons/repository
 [semver]: http://semver.org/spec/v2.0.0.htm

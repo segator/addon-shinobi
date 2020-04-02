@@ -34,6 +34,6 @@ and Universities do not require a subscription.
 [forum]: https://community.home-assistant.io/
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-beta-yellow.svg
-[release-shield]: https://img.shields.io/badge/version-0.3.0b0-blue.svg
-[release]: {https://github.com/roblandry/addon-shinobi/tree/v0.3.0b0
+[release-shield]: https://img.shields.io/github/v/release/roblandry/addon-shinobi?include_prereleases
+[release]: https://github.com/roblandry/addon-shinobi/tree/v0.3.0b0
 [screenshot]: https://github.com/roblandry/addon-shinobi/raw/master/images/screenshot.jpg
