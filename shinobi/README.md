@@ -31,7 +31,7 @@ and Universities do not require a subscription.
 [discord]: http://discordapp.com/users/378376356108435457
 [docs]: https://github.com/roblandry/addon-shinobi/blob/v0.3.0b0/README.md
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/
+[forum]: https://community.home-assistant.io/t/hass-addon-shinobi-revival/183349
 [maintenance-shield]: https://img.shields.io/maintenance/yes/2020.svg
 [project-stage-shield]: https://img.shields.io/badge/project%20stage-beta-yellow.svg
 [release-shield]: https://img.shields.io/github/v/release/roblandry/addon-shinobi?include_prereleases

@@ -375,7 +375,7 @@ SOFTWARE.
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg
 [discord-me]: http://discordapp.com/users/378376356108435457
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg
-[forum]: https://community.home-assistant.io/
+[forum]: https://community.home-assistant.io/t/hass-addon-shinobi-revival/183349
 [frenck]: https://github.com/frenck
 [roblandry]: https://github.com/roblandry
 [home-assistant]: https://home-assistant.io
