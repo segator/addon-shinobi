@@ -20,7 +20,7 @@ if bashio::config.true 'mysql'; then
 
     host=$(bashio::config 'mysql_host')
     CONFIG=$(bashio::jq "${CONFIG}" ".db.host=\"${host}\"")
-    
+
     username=$(bashio::config 'mysql_username')
     CONFIG=$(bashio::jq "${CONFIG}" ".db.user=\"${username}\"")
 

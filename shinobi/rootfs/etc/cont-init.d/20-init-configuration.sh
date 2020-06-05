@@ -30,6 +30,6 @@ if ! bashio::fs.file_exists '/data/super.json'; then
     cp /opt/shinobi/super.sample.json /data/super.json
 fi
 
-if ! bashio::fs.file_exists '/data/motion.conf.json'; then
-    cp /opt/shinobi/plugins/motion/conf.sample.json /data/motion.conf.json
+if bashio::fs.file_exists '/data/motion.conf.json'; then
+    bashio::log.warning 'motion.conf.json is no longer required for motion. Recommend deleting.'
 fi
