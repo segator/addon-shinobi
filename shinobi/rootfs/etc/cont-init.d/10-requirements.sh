@@ -6,7 +6,7 @@
 # shellcheck disable=SC1091
 
 # Check SSL requirements, if enabled
-if bashio::config.has_value 'ssl'; then
+if bashio::config.true 'ssl'; then
     if ! bashio::config.has_value 'certfile'; then
         bashio::exit.nok 'SSL is enabled, but no certfile was specified'
     fi

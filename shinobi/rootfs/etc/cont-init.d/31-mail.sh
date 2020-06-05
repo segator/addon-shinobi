@@ -29,7 +29,7 @@ else
     port=$(bashio::config 'mail_port')
     CONFIG=$(bashio::jq "${CONFIG}" ".mail.port=${port}")
 
-    if bashio::config.has_value 'mail_secure'; then
+    if bashio::config.true 'mail_secure'; then
         CONFIG=$(bashio::jq "${CONFIG}" ".mail.secure=true")
     else
         CONFIG=$(bashio::jq "${CONFIG}" ".mail.secure=false")
