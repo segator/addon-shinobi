@@ -6,5 +6,10 @@
 # ==============================================================================
 # shellcheck disable=SC1091
 
-ln -s /data/conf.json /opt/shinobi/conf.json
-ln -s /data/super.json /opt/shinobi/super.json
+if ! bashio::fs.file_exists '/opt/shinobi/conf.json'; then
+    ln -s /data/conf.json /opt/shinobi/conf.json
+fi
+
+if ! bashio::fs.file_exists '/opt/shinobi/super.json'; then
+    ln -s /data/super.json /opt/shinobi/super.json
+fi
