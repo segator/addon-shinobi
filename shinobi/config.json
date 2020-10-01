@@ -1,6 +1,6 @@
 {
   "name": "Shinobi Pro",
-  "version": "0.4.0b3",
+  "version": "0.4.0b4",
   "stage": "experimental",
   "slug": "shinobi",
   "description": "Beautiful and feature-rich CCTV/NVR for your cameras",
@@ -13,6 +13,7 @@
   "hassio_role": "default",
   "homeassistant_api": false,
   "host_network": false,
+  "video": true,
   "ports": {
     "80/tcp": 7440,
     "443/tcp": 7443

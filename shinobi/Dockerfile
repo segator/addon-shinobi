@@ -8,29 +8,29 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # hadolint ignore=DL3003,DL3016
 RUN \
     apk add --no-cache --virtual .build-dependencies \
-        build-base=0.5-r1 \
-        g++=9.2.0-r4 \
-        jpeg-dev=8-r6 \
-        make=4.2.1-r2 \
-        openssl-dev=1.1.1g-r0 \
-        pkgconf=1.6.3-r0 \
-        python2-dev=2.7.18-r0 \
-        git=2.24.3-r0 \
+        build-base \
+        g++ \
+        jpeg-dev \
+        make \
+        openssl-dev \
+        pkgconf \
+        python2-dev \
+        git \
     && apk add --no-cache \
-        npm=12.15.0-r1 \
-        yarn=1.19.2-r0 \
-        ffmpeg=4.2.1-r3 \
-        mysql-client=10.4.13-r0 \
-        nodejs=12.15.0-r1 \
-        python2=2.7.18-r0 \
-        socat=1.7.3.3-r1 \
-        sqlite=3.30.1-r2 \
-        ttf-freefont=20120503-r1 \
-        x264=20191119-r0 \
-        x265=3.2.1-r0 \
+        npm \
+        yarn \
+        ffmpeg \
+        mysql-client \
+        nodejs \
+        python2 \
+        socat \
+        sqlite \
+        ttf-freefont \
+        x264 \
+        x265 \
     && git clone -b master --single-branch \
         https://gitlab.com/Shinobi-Systems/Shinobi.git /opt/shinobi/ \
-    && git -C /opt/shinobi checkout 3f536cc1c6c616029f4a8a83c48356cb934979e9 \
+    && git -C /opt/shinobi checkout e9e33a4b592fb12911e4e78de8c578bb5f1bedef \
     && git -C /opt/shinobi reflog expire --expire=now --all \
     && git -C /opt/shinobi gc --prune=now --aggressive \
     && cd /opt/shinobi \
