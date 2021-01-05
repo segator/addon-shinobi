@@ -14,7 +14,7 @@
   "homeassistant_api": false,
   "host_network": false,
   "video": true,
-  "devices" : ["/dev/dri:/dev/dri"],
+  "devices" : ["/dev/dri:/dev/dri:rwm"],
   "ports": {
     "80/tcp": 7440,
     "443/tcp": 7443
