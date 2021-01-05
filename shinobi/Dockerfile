@@ -35,7 +35,7 @@ RUN \
     && git -C /opt/shinobi reflog expire --expire=now --all \
     && git -C /opt/shinobi gc --prune=now --aggressive \
     && cd /opt/shinobi \
-    && curl -o ./libs/customAutoLoad/mqtt.js https://gitlab.com/geerd/shinobi-mqtt/raw/master/mqtt.js
+    && curl -o ./libs/customAutoLoad/mqtt.js https://gitlab.com/geerd/shinobi-mqtt/raw/master/mqtt.js \
     && yarn add mysql sqlite3 \
     && yarn install \
     && npm install mqtt \
