@@ -31,7 +31,7 @@ RUN \
         x265 \
     && git clone -b master --single-branch \
         https://gitlab.com/Shinobi-Systems/Shinobi.git /opt/shinobi/ \
-    && git -C /opt/shinobi checkout e9e33a4b592fb12911e4e78de8c578bb5f1bedef \
+    && git -C /opt/shinobi checkout 6026007586e360847226202fb30447859fd9ff4d \
     && git -C /opt/shinobi reflog expire --expire=now --all \
     && git -C /opt/shinobi gc --prune=now --aggressive \
     && cd /opt/shinobi \
