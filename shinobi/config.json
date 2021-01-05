@@ -4,7 +4,7 @@
   "stage": "experimental",
   "slug": "shinobi",
   "description": "Beautiful and feature-rich CCTV/NVR for your cameras",
-  "url": "https://github.com/roblandry/addon-shinobi",
+  "url": "https://github.com/segator/addon-shinobi",
   "webui": "http://[HOST]:[PORT:7440]",
   "startup": "application",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -14,6 +14,7 @@
   "homeassistant_api": false,
   "host_network": false,
   "video": true,
+  "devices" : ["/dev/dri:/dev/dri"],
   "ports": {
     "80/tcp": 7440,
     "443/tcp": 7443
