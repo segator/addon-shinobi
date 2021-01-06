@@ -11,6 +11,9 @@ declare username
 declare password
 declare database
 declare port
+declare MQTT_HOST
+declare MQTT_USER
+declare MQTT_PASSWORD
 
 CONFIG=$(</opt/shinobi/conf.json)
 CONFIG=$(bashio::jq "${CONFIG}" ".db={}")
