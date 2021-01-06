@@ -14,6 +14,7 @@
   "homeassistant_api": false,
   "host_network": false,
   "video": true,
+  "services": [ "mqtt:need"],
   "devices" : ["/dev/dri:/dev/dri:rwm"],
   "ports": {
     "80/tcp": 7440,

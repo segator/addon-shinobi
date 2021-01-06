@@ -37,4 +37,12 @@ else
     CONFIG=$(bashio::jq "${CONFIG}" ".db.filename=\"/data/shinobi.sqlite\"")
 fi
 
+MQTT_HOST=$(bashio::services mqtt "host")
+MQTT_USER=$(bashio::services mqtt "username")
+MQTT_PASSWORD=$(bashio::services mqtt "password")
+CONFIG=$(bashio::jq "${CONFIG}" ".mqtt.url=\"mqtt://${MQTT_HOST}\"")
+CONFIG=$(bashio::jq "${CONFIG}" ".mqtt.mqtt_options.username=\"${MQTT_USER}\"")
+CONFIG=$(bashio::jq "${CONFIG}" ".mqtt.mqtt_options.password=\"${MQTT_PASSWORD}\"")
+
+
 echo "${CONFIG}" > /opt/shinobi/conf.json

@@ -37,9 +37,8 @@ RUN \
     && cd /opt/shinobi \
     && mkdir -p libs/customAutoLoad \
     && curl -o libs/customAutoLoad/mqtt.js https://gitlab.com/geerd/shinobi-mqtt/raw/master/mqtt.js \
-    && yarn add mysql sqlite3 \
+    && yarn add mysql sqlite3 mqtt request moment \
     && yarn install \
-    && npm install mqtt \
     && apk del --purge .build-dependencies
 
 # Copy root filesystem
